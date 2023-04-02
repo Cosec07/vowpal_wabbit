@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/RLOFEST/vowpal_wabbit/vowpalwabbit/cache_parser/vw_cache_parser_test[1]_tests.cmake")
+  include("/mnt/c/RLOFEST/vowpal_wabbit/vowpalwabbit/cache_parser/vw_cache_parser_test[1]_tests.cmake")
+else()
+  add_test(vw_cache_parser_test_NOT_BUILT vw_cache_parser_test_NOT_BUILT)
+endif()

@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/RLOFEST/vowpal_wabbit/vowpalwabbit/json_parser/vw_json_parser_test[1]_tests.cmake")
+  include("/mnt/c/RLOFEST/vowpal_wabbit/vowpalwabbit/json_parser/vw_json_parser_test[1]_tests.cmake")
+else()
+  add_test(vw_json_parser_test_NOT_BUILT vw_json_parser_test_NOT_BUILT)
+endif()

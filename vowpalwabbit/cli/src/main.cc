@@ -25,6 +25,7 @@ std::unique_ptr<VW::workspace> setup(std::unique_ptr<options_i> options)
 
 int main(int argc, char* argv[])
 {
+  std::cout<<"Hello World this is 1"<< std::endl;
   bool should_use_onethread = false;
   std::string log_level;
   std::string log_output_stream;
@@ -46,6 +47,7 @@ int main(int argc, char* argv[])
   auto main_logger = VW::io::create_default_logger();
   try
   {
+    std::cout << "hello world" << std::endl;
     // support multiple vw instances for training of the same datafile for the same instance
     std::vector<std::unique_ptr<VW::workspace>> alls;
     if (argc == 3 && !std::strcmp(argv[1], "--args"))
@@ -63,7 +65,7 @@ int main(int argc, char* argv[])
 
         const std::string new_args = sstr.str();
         std::cout << new_args << std::endl;
-
+        std::cout<<"Hello World this is 2"<< std::endl;
         auto ptr = VW::make_unique<options_cli>(VW::split_command_line(new_args));
         ptr->add_and_parse(driver_config);
         auto level = VW::io::get_log_level(log_level);

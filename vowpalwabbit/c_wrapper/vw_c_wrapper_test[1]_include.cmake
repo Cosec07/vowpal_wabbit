@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/RLOFEST/vowpal_wabbit/vowpalwabbit/c_wrapper/vw_c_wrapper_test[1]_tests.cmake")
+  include("/mnt/c/RLOFEST/vowpal_wabbit/vowpalwabbit/c_wrapper/vw_c_wrapper_test[1]_tests.cmake")
+else()
+  add_test(vw_c_wrapper_test_NOT_BUILT vw_c_wrapper_test_NOT_BUILT)
+endif()
