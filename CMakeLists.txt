@@ -93,6 +93,7 @@ else()
   set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -g -DNDEBUG")
 endif()
 
+
 # Grab git commitish into variable
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
   FIND_PACKAGE(Git)
@@ -318,5 +319,8 @@ set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 set(CPACK_PACKAGE_CONTACT "https://github.com/VowpalWabbit/vowpal_wabbit")
 # Generates a package dependency list in the deb control file
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS On)
-
 include(CPack)
+
+find_package(ZLIB REQUIRED)
+target_link_libraries(ZLIB::ZLIB)
+set(CMAKE_TOOLCHAIN_FILE C:/RLOFEST/vowpal_wabbit/ext_libs/vcpkg/scripts/buildsystems/vcpkg.cmake)
